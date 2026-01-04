@@ -1,0 +1,18 @@
+<div class="conatiner w-50 mx-auto">
+  <app-reusable></app-reusable>
+  <div class="p-5 mt-5 mx-auto bg-secondary text-white">
+    <h2 class="text-center m-4">View User</h2>
+    <div>
+      <p>
+        Name: <b class="text-info">{{ userData?.name }}</b>
+      </p>
+      <p>
+        Username: <b class="text-info">{{ userData?.username }}</b>
+      </p>
+      <p>
+        Email: <b class="text-info">{{ userData?.email }}</b>
+      </p>
+    </div>
+    <button class="btn btn-success" (click)="goBack()">Close</button>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container">
+  <app-reusable [childProperty]="greetForChildProp"></app-reusable>
+  <h2 class="text-center m-4">
+    Angular 19 CRUD Application against Json server
+  </h2>
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th class="col-2">ID</th>
+        <th class="col-2">Name</th>
+        <th class="col-2">Username</th>
+        <th class="col-3">Email</th>
+        <th class="col-1">Update</th>
+        <th class="col-1">View</th>
+        <th class="col-1">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of apiData">
+        <td>{{ row.id }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.username }}</td>
+        <td>{{ row.email }}</td>
+        <td>
+          <button
+            class="btn btn-warning btn-sm m-1"
+            (click)="onUpdateUser(row.id)"
+          >
+            Update
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-secondary btn-sm m-1"
+            (click)="onViewUser(row.id)"
+          >
+            View
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-danger btn-sm m-1"
+            (click)="onDeleteUser(row.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-info m-2" (click)="addNewUser()">Add New User</button>
+</div>

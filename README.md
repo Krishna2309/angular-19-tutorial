@@ -57,3 +57,25 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Running JSON server for mock api
+
+### installing Json server
+
+npm i -g json-server@0
+
+### create a db.json file at root and fill the sample data.
+
+{
+"Users": [{
+"id": 1,
+"name": "Alice",
+"username": "alice123",
+"email": "alice@example.com"
+}]
+}
+
+### run the json server using
+
+    json-server --watch db.json
+# angular-19-tutorial

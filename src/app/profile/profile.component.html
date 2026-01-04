@@ -1,0 +1,23 @@
+<div class="m-3">
+  <!-- 1. sharing data -->
+  <!-- <ul>
+    <li><strong>ID:</strong> {{ userData.id }}</li>
+    <li><strong>Name:</strong> {{ userData.name }}</li>
+    <li><strong>Username:</strong> {{ userData.username }}</li>
+    <li><strong>Email:</strong> {{ userData.email }}</li>
+  </ul> -->
+  <!-- 2. sharing business logic -->
+  <!-- @if(isEligible){
+  <h4 class="text-success">You are eligible for a premium subscription!</h4>
+  }@else {
+  <h4 class="text-danger">You are not eligible for a premium subscription.</h4>
+  } -->
+
+  <!-- 3. interaction with API -->
+  <ul *ngFor="let data of userApiData">
+    <li><strong>ID:</strong> {{ data.id }}</li>
+    <li><strong>Name:</strong> {{ data.name }}</li>
+    <li><strong>Username:</strong> {{ data.username }}</li>
+    <li><strong>Email:</strong> {{ data.email }}</li>
+  </ul>
+</div>
